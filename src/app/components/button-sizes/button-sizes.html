@@ -1,0 +1,8 @@
+
+<button class="btn"
+        [ngClass]="[size, variant, { loading: loading, disabled: disabled }]">
+  <ng-container *ngIf="!loading">{{ label }}</ng-container>
+  <ng-container *ngIf="loading">
+    <span class="spinner"></span>
+  </ng-container>
+</button>
