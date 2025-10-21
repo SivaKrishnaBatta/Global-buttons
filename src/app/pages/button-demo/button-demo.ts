@@ -1,5 +1,6 @@
 import { Component,} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Button } from '../../components/button/button';
 
 type ButtonType =
   | 'primary'
@@ -13,7 +14,7 @@ type ButtonType =
 @Component({
   selector: 'app-button-demo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Button],
   templateUrl: './button-demo.html',
   styleUrl: './button-demo.scss'
 })

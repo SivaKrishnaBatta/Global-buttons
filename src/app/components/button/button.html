@@ -1,9 +1,9 @@
 <button
   [disabled]="disabled"
   class="btn"
-  [ngClass]="[type, size, disabled ? 'disabled' : '', loading ? 'loading' : '']">
+  [ngClass]="[type, size, state, disabled ? 'disabled' : '', loading ? 'loading' : '']"
+  (click)="onClick()"
+>
   <span *ngIf="!loading">{{ label }}</span>
   <div *ngIf="loading" class="spinner"></div>
 </button>
-
-
